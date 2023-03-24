@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Welcome screen CSS  */
+
+.welcome-text{
+  color: white;
+  top: 20px;
+}
+
+.background-image {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/Browser-Fitness-Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.welcome-text{
+  color: white;
+  margin-bottom: 30%;
+}
+
+.welcome-button {
+ width: 100%;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  border-color: white;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.712);
+
+}
+
+.no-underline {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+
+.flex-row {
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+  list-style-type: none;
+  justify-content: space-around;
+  
+
+
+}
