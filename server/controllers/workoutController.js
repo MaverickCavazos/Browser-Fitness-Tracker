@@ -13,9 +13,15 @@ const getWorkout = asyncHandler(async (req, res) => {
 const createWorkout = asyncHandler(async (req, res) => {
 
 
-    if (!req.body.exercise || !req.body.weight || !req.body.reps) {
+    if (!req.body.exercise) {
         res.status(400)
-        throw new Error('Please add a workout')
+        throw new Error('Please add a exercise')
+    }else if (!req.body.weight){
+        res.status(400)
+        throw new Error('Please add a weight')
+    }else if (!req.body.reps){
+        res.status(400)
+        throw new Error('Please add reps')
     }
 
     const workout = await Workout.create({

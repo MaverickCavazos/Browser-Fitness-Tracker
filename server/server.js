@@ -15,6 +15,7 @@ app.use(express.json());
 
 
 app.use('/api/workouts', require('./routes/workOutRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 app.use(errorHandler)
 
