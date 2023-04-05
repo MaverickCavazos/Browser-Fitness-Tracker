@@ -69,8 +69,12 @@ const loginUser = asyncHandler(async (req, res) => {
 })
 
 const getUser = asyncHandler(async (req, res) => {
-    res.json({
-        message: "got user info"
+
+    const { _id, username, email } = await User.findById(req.user.id)
+    res.status(200).json({
+        id: _id,
+        username,
+        email
     })
 })
 
@@ -78,10 +82,10 @@ const getUser = asyncHandler(async (req, res) => {
 //Make JWT token
 const generateToken = (id) => {
     return jwt.sign({ id },
-           process.env.JWT_SECRET,
-           {
+        process.env.JWT_SECRET,
+        {
             expiresIn: '30d'
-           }
+        }
     )
 }
 
